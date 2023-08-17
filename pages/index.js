@@ -41,7 +41,6 @@ export default function Home() {
   
     useLayoutEffect(() => {
       if(yOffset > elementRef.current.offsetTop){
-        setElementOpacity("1");
         setElementClass("textAnimation");
       }
     })
@@ -57,20 +56,21 @@ export default function Home() {
       <main>
         <div>
           <div 
-          ref={elementRef}
+          ref={elementRef} 
+          className={elementClass}
           style={{
             position: "absolute",
             top: "1500px",
+            marginLeft: "50px",
             //width: "200px", 
             height: "200px",
             background: "white",
             zIndex: "20",
-            opacity: elementOpacity,
+            opacity: 1,
             //transition: "1s"
           }}>
             <h3 
-            className={"text" + " " + elementClass}
-            
+            className='text'   
             >some text blaas das das d blasd ad ad das dlsdf </h3>
           </div>
         </div>
