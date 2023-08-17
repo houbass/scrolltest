@@ -17,16 +17,17 @@ main {
 }
 
 .textAnimation {
-  margin-left: 150px;
   animation: textAnim 1s forwards;
 }
 
 @keyframes textAnim {
   from{
-    margin-left: 150px;
+    left: 150px;
+    opacity: 0;
   }
   to{
-    margin-left: 10px;
+    left: 10px;
+    opacity: 1;
   }
   
 }

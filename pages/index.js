@@ -5,7 +5,7 @@ export default function Home() {
 
     //SCROLLING
     const [yOffset, setYOffset] = useState(null);
-    const [elementOpacity, setElementOpacity] = useState("0");
+    //const [elementOpacity, setElementOpacity] = useState("0");
     const [elementClass, setElementClass] = useState("");
     const elementRef = useRef();
 
@@ -61,12 +61,12 @@ export default function Home() {
           style={{
             position: "absolute",
             top: "1500px",
-            marginLeft: "50px",
+            left: "150px",
             //width: "200px", 
             height: "200px",
             background: "white",
             zIndex: "20",
-            opacity: 1,
+            opacity: "0",
             //transition: "1s"
           }}>
             <h3 
