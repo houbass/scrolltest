@@ -1,7 +1,7 @@
 import Head from 'next/head'
 
 //components
-import Topic1 from '@/components/Topic1'
+import Maincontent from '@/components/Maincontent'
 
 export default function Home() {
 
@@ -15,9 +15,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <div>
-          <Topic1 />
-        </div>
+
+          <Maincontent />
+
       </main>
     </>
   )

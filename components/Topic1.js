@@ -60,10 +60,10 @@ export default function Topic1() {
     <>
         <div 
         ref={elementRef} 
-        className={"topic1" + " " + elementClass}
+        className="topic1"
         >
             <h3 
-            className='text'   
+            className={"text" + " " + elementClass} 
             >
                 some text blaas das das d blasd ad ad das dlsdf 
             </h3>
