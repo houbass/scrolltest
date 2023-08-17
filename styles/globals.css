@@ -10,3 +10,23 @@
 main {
   height: 2500px;
 }
+
+.text {
+  font-size: 30px;
+  width: 200px;
+}
+
+.textAnimation {
+  margin-left: 150px;
+  animation: textAnim 1s forwards;
+}
+
+@keyframes textAnim {
+  from{
+    margin-left: 150px;
+  }
+  to{
+    margin-left: 10px;
+  }
+  
+}

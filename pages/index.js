@@ -6,6 +6,7 @@ export default function Home() {
     //SCROLLING
     const [yOffset, setYOffset] = useState(null);
     const [elementOpacity, setElementOpacity] = useState("0");
+    const [elementClass, setElementClass] = useState("");
     const elementRef = useRef();
 
     //get total height
@@ -14,7 +15,7 @@ export default function Home() {
       const windowHeigth = window.innerHeight;
       const totalHeight = scrollYoffset + windowHeigth;
 
-      return totalHeight;
+      return (totalHeight - (windowHeigth * 0.2));
     }
 
     //on scroll function
@@ -41,6 +42,7 @@ export default function Home() {
     useLayoutEffect(() => {
       if(yOffset > elementRef.current.offsetTop){
         setElementOpacity("1");
+        setElementClass("textAnimation");
       }
     })
 
@@ -59,13 +61,17 @@ export default function Home() {
           style={{
             position: "absolute",
             top: "1500px",
-            width: "200px", 
+            //width: "200px", 
             height: "200px",
             background: "white",
             zIndex: "20",
             opacity: elementOpacity,
-            transition: "2s"
+            //transition: "1s"
           }}>
+            <h3 
+            className={"text" + " " + elementClass}
+            
+            >some text blaas das das d blasd ad ad das dlsdf </h3>
           </div>
         </div>
       </main>
