@@ -1,49 +1,10 @@
 import Head from 'next/head'
-import { useLayoutEffect, useRef, useState } from 'react'
+
+//components
+import Topic1 from '@/components/Topic1'
 
 export default function Home() {
 
-    //SCROLLING
-    const [yOffset, setYOffset] = useState(null);
-    //const [elementOpacity, setElementOpacity] = useState("0");
-    const [elementClass, setElementClass] = useState("");
-    const elementRef = useRef();
-
-    //get total height
-    function getTotalHeight() {
-      const scrollYoffset = window.pageYOffset;
-      const windowHeigth = window.innerHeight;
-      const totalHeight = scrollYoffset + windowHeigth;
-
-      return (totalHeight - (windowHeigth * 0.2));
-    }
-
-    //on scroll function
-    function scrollFun() {
-      setYOffset(getTotalHeight);
-    }
-  
-    //on resize
-    function resizeFun() {
-      setYOffset(getTotalHeight);
-    }
-  
-    useLayoutEffect(() => {
-      setYOffset(getTotalHeight);
-      window.addEventListener("scroll", scrollFun);
-      window.addEventListener("resize", resizeFun);
-  
-      return () => {
-        window.removeEventListener("scroll", scrollFun);
-        window.removeEventListener("resize", resizeFun);
-      }
-    }, [])
-  
-    useLayoutEffect(() => {
-      if(yOffset > elementRef.current.offsetTop){
-        setElementClass("textAnimation");
-      }
-    })
 
   return (
     <>
@@ -55,24 +16,7 @@ export default function Home() {
       </Head>
       <main>
         <div>
-          <div 
-          ref={elementRef} 
-          className={elementClass}
-          style={{
-            position: "absolute",
-            top: "1500px",
-            left: "150px",
-            //width: "200px", 
-            height: "200px",
-            background: "white",
-            zIndex: "20",
-            opacity: "0",
-            //transition: "1s"
-          }}>
-            <h3 
-            className='text'   
-            >some text blaas das das d blasd ad ad das dlsdf </h3>
-          </div>
+          <Topic1 />
         </div>
       </main>
     </>

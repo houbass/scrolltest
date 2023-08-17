@@ -11,23 +11,33 @@ main {
   height: 2500px;
 }
 
+.topic1 {
+  position: absolute;
+    top: 1500px;
+    height: 200px;
+    z-index: 20;
+    opacity: 0;
+}
+
 .text {
   font-size: 30px;
   width: 200px;
 }
 
 .textAnimation {
-  animation: textAnim 1s forwards;
+  animation: textAnim 0.5s forwards ease-in;
 }
 
 @keyframes textAnim {
-  from{
-    left: 150px;
+  0%{
+    left: 70px;
     opacity: 0;
   }
-  to{
+  20%{
+    opacity: 1;
+  }
+  100%{
     left: 10px;
     opacity: 1;
   }
-  
 }
